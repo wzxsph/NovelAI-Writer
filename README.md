@@ -71,6 +71,8 @@ novelai_writer/
 │   └── novelai-worldbuild.md   # 世界观构建
 ├── skills/                      # 4个技能
 ├── rules/                       # 文风/禁词规则
+│   ├── novelai-rules.md        # 文风规范与禁词
+│   └── p0-p3-context.md        # P0-P3 层级上下文定义
 ├── prompts/                     # 7个 prompt 模板
 └── state/                       # 状态文档模板
 ```

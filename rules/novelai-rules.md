@@ -1,3 +1,8 @@
+---
+name: novelai-rules
+description: 网文写作文风规范与禁词规则
+---
+
 # NovelAI Writer — 写作规则
 
 ## 文风规范
