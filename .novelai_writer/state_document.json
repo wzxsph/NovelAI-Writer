@@ -1,0 +1,114 @@
+{
+  "version": "1.0",
+  "last_updated_chapter": 2,
+  "metadata": {
+    "title": "我真的可以拥有甜甜的恋爱吗",
+    "genre": "都市+玄幻+穿越",
+    "style": "幽默风趣",
+    "author": "Sam"
+  },
+  "characters": [
+    {
+      "id": "char_001",
+      "name": "林小雨",
+      "role": "protagonist",
+      "status": "alive",
+      "current_location": "天元宗客房",
+      "emotional_state": "困惑但开心",
+      "relationships": {"陆尘": "命中注定(送点心)", "苏婉儿": "敌意", "萧然": "初识"},
+      "first_appearance": 1,
+      "updated_chapter": 2,
+      "description": "现代都市女大学生，乐观开朗，有点小迷糊。隐性灵体，修炼天赋极高。已成功感应灵气，获得灵玉护体技能。"
+    },
+    {
+      "id": "char_002",
+      "name": "陆尘",
+      "role": "protagonist",
+      "status": "alive",
+      "current_location": "天元宗",
+      "emotional_state": "暗关注",
+      "relationships": {"林小雨": "命中注定(送点心)"},
+      "first_appearance": 1,
+      "updated_chapter": 2,
+      "description": "天元宗核心弟子，外冷内热，毒舌但温柔。身怀上古血脉，被家族寄予厚望。晚上偷偷送点心给林小雨。"
+    },
+    {
+      "id": "char_003",
+      "name": "苏婉儿",
+      "role": "antagonist",
+      "status": "alive",
+      "current_location": "天元宗",
+      "emotional_state": "嫉妒",
+      "relationships": {"林小雨": "敌意", "萧然": "追求者"},
+      "first_appearance": 2,
+      "updated_chapter": 2,
+      "description": "天元宗内门弟子，喜欢陆尘，对林小雨有敌意。"
+    },
+    {
+      "id": "char_004",
+      "name": "萧然",
+      "role": "supporting",
+      "status": "alive",
+      "current_location": "天元宗",
+      "emotional_state": "好奇",
+      "relationships": {"苏婉儿": "追求者", "林小雨": "初识"},
+      "first_appearance": 2,
+      "updated_chapter": 2,
+      "description": "天元宗三弟子，温润如玉，对林小雨感兴趣。"
+    }
+  ],
+  "timeline": [
+    {
+      "id": "evt_001",
+      "chapter": 1,
+      "description": "林小雨触发灵玉佩，穿越至天元宗，与陆尘相遇，红线绳绑定",
+      "participants": ["char_001", "char_002"]
+    },
+    {
+      "id": "evt_002",
+      "chapter": 2,
+      "description": "苏婉儿来访警告林小雨，被萧然制止。林小雨成功感应灵气",
+      "participants": ["char_001", "char_003", "char_004"]
+    }
+  ],
+  "items": [
+    {
+      "id": "item_001",
+      "name": "灵玉佩",
+      "type": "artifact",
+      "current_owner": "char_001",
+      "ownership_history": [{"owner": "char_001", "since_chapter": 1}],
+      "description": "祖传灵物，触发正向穿越。被动技能：灵玉护体(修炼速度+100%)"
+    },
+    {
+      "id": "item_002",
+      "name": "红线绳",
+      "type": "artifact",
+      "current_owner": "char_001",
+      "ownership_history": [{"owner": "char_001", "since_chapter": 1}],
+      "description": "成对出现，绑定陆尘。甜度上升时会发热。"
+    }
+  ],
+  "plot_threads": [
+    {
+      "id": "plot_001",
+      "name": "主线-命中注定的相遇",
+      "state": "active",
+      "priority": 1
+    }
+  ],
+  "relationships": [
+    {
+      "from": "char_001",
+      "to": "char_002",
+      "type": "命中注定",
+      "evidence": "红线绳绑定，陆尘夜间送点心"
+    },
+    {
+      "from": "char_001",
+      "to": "char_003",
+      "type": "敌对",
+      "evidence": "苏婉儿警告林小雨远离陆尘"
+    }
+  ]
+}
