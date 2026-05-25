@@ -27,7 +27,8 @@ novelai_writer/
 │   ├── novelai-consistency.md # 一致性校验
 │   └── novelai-worldbuild.md # 世界观生成
 ├── rules/                       # 写作规则
-│   └── novelai-rules.md       # 文风/禁词规则
+│   ├── novelai-rules.md       # 文风/禁词规则
+│   └── p0-p3-context.md       # P0-P3 层级上下文定义
 ├── prompts/                      # Prompt 模板
 │   ├── 内容生成.txt
 │   ├── 角色动态信息提取.txt
