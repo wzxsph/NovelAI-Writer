@@ -229,7 +229,7 @@ cp -r /path/to/novelai_writer/commands/* .claude/commands/novelai_writer/
 ## 参考
 
 - [Everything Claude Code (ECC)](https://github.com/affaan-m/ECC) — 系统架构参考
-- [NovelForge](https://github.com/你的用户名/NovelForge) — prompt 模板参考
+- [NovelForge](https://github.com/RhythmicWave/NovelForge) — prompt 模板参考
 
 ## 许可证
 
