@@ -1,0 +1,12 @@
+{
+  "name": "novelai-writer",
+  "version": "1.0.0",
+  "description": "网文长篇写作助手 — 状态追踪 + 上下文一致性引擎",
+  "author": "NovelAI Writer",
+  "license": "MIT",
+  "keywords": ["claude-code", "writing", "novel", "web-novel", "consistency"],
+  "agents": ["./agents/"],
+  "skills": ["./skills/"],
+  "commands": ["./commands/"],
+  "rules": ["./rules/"]
+}
