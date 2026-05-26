@@ -1,8 +1,7 @@
 {
   "name": "novelai-writer",
   "owner": {
-    "name": "NovelAI Writer",
-    "email": "novelai-writer@example.com"
+    "name": "NovelAI Writer"
   },
   "metadata": {
     "description": "网文长篇写作助手 — 状态追踪 + 上下文一致性引擎"
@@ -11,31 +10,15 @@
     {
       "name": "novelai-writer",
       "source": "./",
-      "description": "基于 Claude Code 的网文长篇写作助手，通过十维一致性校验框架管理角色、物品、情节线和关系网络，确保数百章内容连贯一致",
+      "description": "基于 Claude Code 的网文长篇写作助手，通过十维一致性校验框架管理角色、物品、情节线和关系网络",
       "version": "1.0.0",
       "author": {
-        "name": "NovelAI Writer",
-        "email": "novelai-writer@example.com"
+        "name": "NovelAI Writer"
       },
-      "repository": "https://github.com/wzxsph/novelai-writer",
+      "repository": "https://github.com/wzxsph/NovelAI-Writer",
       "license": "MIT",
-      "keywords": [
-        "claude-code",
-        "writing",
-        "novel",
-        "web-novel",
-        "consistency",
-        "chinese-fiction",
-        "storytelling"
-      ],
+      "keywords": ["claude-code", "writing", "novel", "web-novel", "consistency"],
       "category": "workflow",
-      "tags": [
-        "claude-code",
-        "writing",
-        "novel",
-        "web-novel",
-        "consistency"
-      ],
       "strict": false
     }
   ]
