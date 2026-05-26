@@ -197,7 +197,7 @@ novelai_writer/
 
 ```bash
 # 添加市场
-/plugin marketplace add https://github.com/wzxsph/novelai-writer
+/plugin marketplace add https://github.com/wzxsph/NovelAI-Writer
 
 # 安装插件
 /plugin install novelai-writer
@@ -207,17 +207,16 @@ novelai_writer/
 
 ```bash
 # 克隆仓库
-git clone https://github.com/wzxsph/novelai-writer.git
+git clone https://github.com/wzxsph/NovelAI-Writer.git
 
 # 进入目录
-cd novelai-writer
+cd NovelAI-Writer
 
-# 复制命令到项目（不推荐，命令文件应通过插件加载）
-mkdir -p .claude/commands
-cp -r commands/* .claude/commands/
+# 复制整个项目到 Claude Code 配置目录
+cp -r agents commands skills rules prompts knowledge workflows contexts state .claude-plugin/ ~/.claude/
 ```
 
-> **注意**：插件安装方式为推荐方式。复制命令文件会导致命令无法正确加载插件元数据。
+> **注意**：插件安装方式为推荐方式。手动复制需要确保所有组件路径正确。
 
 ## 参考
 
