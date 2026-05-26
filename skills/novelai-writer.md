@@ -21,12 +21,7 @@ description: 网文长篇写作助手，激活于用户撰写/续写小说章节
 
 ## P0-P3 层级上下文
 
-| Priority | Name | Content |
-|----------|------|---------|
-| P0 | Hard Constraints | 核心角色定义、世界规则、关键物品属性 |
-| P1 | Current State | 角色位置、情绪状态、持有物品、活跃情节线 |
-| P2 | Near Context | 最近3章事件、最近关系变化 |
-| P3 | Distant Reference | 背景设定、伏笔线、Dormant 情节 |
+参考 `@rules/p0-p3-context.md`
 
 ## State Update Workflow
 
