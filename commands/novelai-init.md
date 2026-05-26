@@ -6,6 +6,12 @@ description: 初始化网文写作工作区，创建状态文档
 
 初始化网文写作工作区，创建 `.novelai_writer/state_document.json`。
 
+## 参数
+
+- `--template`: 模板类型（默认 `default`，可选 `snowflake`）
+  - `default`: 空白项目，从零开始
+  - `snowflake`: 雪花创作法模板，带有引导问题
+
 ## 执行步骤
 
 1. 创建 `.novelai_writer/` 目录
@@ -16,22 +22,29 @@ description: 初始化网文写作工作区，创建状态文档
    - 文风偏好
    - 作者名（可选）
 4. 更新状态文档的 `metadata` 字段
+5. **若使用 `--template snowflake`**: 参考 `@workflows/雪花创作法.md` 引导用户完成创作流程
 
 ## 状态文档结构
 
 ```json
 {
-  "version": "1.0",
+  "version": "2.0",
   "last_updated_chapter": 0,
   "metadata": {
     "title": "小说标题",
-    "genre": "题材类型",
+    "genre": [],
     "style": "文风偏好",
-    "author": "作者名"
+    "author": "作者名",
+    "word_count_target": 0,
+    "template": "default"
   },
   "characters": [],
-  "timeline": [],
+  "scenes": [],
+  "organizations": [],
+  "concepts": [],
   "items": [],
+  "chapters": [],
+  "timeline": [],
   "plot_threads": [],
   "relationships": []
 }

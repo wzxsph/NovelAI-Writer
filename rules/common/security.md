@@ -1,3 +1,8 @@
+---
+name: security
+description: 安全规范
+---
+
 # Security Guidelines
 
 ## Mandatory Security Checks
@@ -7,7 +12,6 @@ Before ANY commit:
 - All user inputs validated
 - SQL injection prevention
 - XSS prevention
-- Authentication/authorization verified
 
 ## Secret Management
 - NEVER hardcode secrets in source code

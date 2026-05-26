@@ -1,3 +1,8 @@
+---
+name: git-workflow
+description: Git 工作流规范
+---
+
 # Git Workflow
 
 ## Commit Message Format
@@ -16,7 +21,6 @@ Types: feat, fix, refactor, docs, test, chore, perf, ci
 2. Use `git diff [base-branch]...HEAD` to see all changes
 3. Draft comprehensive PR summary
 4. Include test plan with TODOs
-5. Push with `-u` flag if new branch
 
 ## Branch Naming
 - feature/xxx-description

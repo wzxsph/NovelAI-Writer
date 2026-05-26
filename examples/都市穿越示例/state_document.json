@@ -1,0 +1,167 @@
+{
+  "version": "2.0",
+  "last_updated_chapter": 2,
+  "metadata": {
+    "title": "我真的可以拥有甜甜的恋爱吗",
+    "genre": ["都市", "玄幻", "穿越", "甜文"],
+    "style": "轻松幽默",
+    "author": "示例作者",
+    "word_count_target": 500000,
+    "template": "snowflake"
+  },
+  "characters": [
+    {
+      "id": "char_001",
+      "name": "林小雨",
+      "role": "protagonist",
+      "age": 24,
+      "appearance": "微卷短发，戴圆框眼镜，笑起来有酒窝",
+      "personality": "乐观开朗，有点小迷糊，但内心坚韧",
+      "background": "现代都市白领，意外穿越到修仙世界",
+      "cultivation": {
+        "realm": "炼气期三层",
+        "talent": "一般",
+        "special": "恋爱脑，修炼靠谈恋爱加成"
+      },
+      "location": "天元宗外门",
+      "emotional_state": "新奇且有些忐忑",
+      "inventory": ["红线绳（已绑定）", "破旧包袱"],
+      "relationships": ["陆尘"]
+    },
+    {
+      "id": "char_002",
+      "name": "陆尘",
+      "role": "male_lead",
+      "age": 26,
+      "appearance": "剑眉星目，白衣胜雪，冷峻但眼神温柔",
+      "personality": "外冷内热，责任心强，对命中注定之人特别包容",
+      "background": "天元宗首席弟子，修仙天才",
+      "cultivation": {
+        "realm": "金丹期",
+        "talent": "绝世天才",
+        "special": "红线绳绑定对象"
+      },
+      "location": "天元宗主峰",
+      "emotional_state": "好奇",
+      "inventory": ["赤霄剑", "储物袋"],
+      "relationships": ["林小雨"]
+    }
+  ],
+  "scenes": [
+    {
+      "id": "scene_001",
+      "name": "天元宗山门",
+      "description": "云雾缭绕，仙鹤盘旋，巨大的白玉牌坊上刻着"天元宗"三个大字",
+      "time": "清晨",
+      "weather": "晴",
+      "characters_present": ["林小雨"]
+    },
+    {
+      "id": "scene_002",
+      "name": "天元宗主峰大殿",
+      "description": "庄严宏伟，飞檐斗拱，殿内灵气充沛",
+      "time": "上午",
+      "weather": "晴",
+      "characters_present": ["陆尘"]
+    }
+  ],
+  "organizations": [
+    {
+      "id": "org_001",
+      "name": "天元宗",
+      "type": "修仙门派",
+      "hierarchy": ["宗主", "长老", "核心弟子", "内门弟子", "外门弟子"],
+      "location": "天元山脉",
+      "members": ["陆尘"]
+    }
+  ],
+  "concepts": [
+    {
+      "id": "concept_001",
+      "name": "红线绳",
+      "type": "法宝",
+      "description": "命中注定的姻缘法宝，绑定后修炼速度与恋爱甜蜜度挂钩",
+      "rules": ["一旦绑定不可解除", "双方修炼加成共享", "甜蜜度越高加成越大"]
+    }
+  ],
+  "items": [
+    {
+      "id": "item_001",
+      "name": "红线绳",
+      "type": "法宝",
+      "owner": "林小雨",
+      "previous_owners": [],
+      "description": "连接命中注定的两人"
+    }
+  ],
+  "chapters": [
+    {
+      "id": "chapter_001",
+      "number": 1,
+      "title": "穿越就绑定红线绳？",
+      "word_count": 3200,
+      "summary": "林小雨穿越到修仙世界，发现手上多了一根红线绳，正疑惑时偶遇陆尘",
+      "key_events": ["穿越", "发现红线绳", "偶遇陆尘"],
+      "plot_threads_active": ["pt_001"]
+    },
+    {
+      "id": "chapter_002",
+      "number": 2,
+      "title": "天元宗的新生活",
+      "word_count": 3100,
+      "summary": "林小雨被带进天元宗，成为外门弟子，开始了解这个修仙世界",
+      "key_events": ["入宗门", "拜见长老", "开始修炼"],
+      "plot_threads_active": ["pt_001", "pt_002"]
+    }
+  ],
+  "timeline": [
+    {
+      "id": "event_001",
+      "chapter": 1,
+      "time": "某日清晨",
+      "event": "林小雨穿越到修仙世界天元宗山门前",
+      "characters_involved": ["林小雨"]
+    },
+    {
+      "id": "event_002",
+      "chapter": 1,
+      "time": "紧接着",
+      "event": "林小雨发现手上红线绳，疑惑时陆尘出现",
+      "characters_involved": ["林小雨", "陆尘"]
+    },
+    {
+      "id": "event_003",
+      "chapter": 2,
+      "time": "入宗当日",
+      "event": "林小雨被带入天元宗，安排为外门弟子",
+      "characters_involved": ["林小雨", "陆尘"]
+    }
+  ],
+  "plot_threads": [
+    {
+      "id": "pt_001",
+      "name": "红线绳之谜",
+      "status": "active",
+      "started_at_chapter": 1,
+      "description": "红线绳的来历和作用是什么？为何会绑定林小雨和陆尘？",
+      "progress": "20%"
+    },
+    {
+      "id": "pt_002",
+      "name": "修炼之路",
+      "status": "active",
+      "started_at_chapter": 2,
+      "description": "林小雨如何在修仙世界提升实力？",
+      "progress": "10%"
+    }
+  ],
+  "relationships": [
+    {
+      "from": "林小雨",
+      "to": "陆尘",
+      "type": "红线绳绑定",
+      "strength": 15,
+      "milestones": ["初次相遇"]
+    }
+  ]
+}

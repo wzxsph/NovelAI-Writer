@@ -1,15 +1,21 @@
 {
-  "version": "1.0",
+  "version": "2.0",
   "last_updated_chapter": 0,
   "metadata": {
     "title": "",
-    "genre": "",
+    "genre": [],
     "style": "",
-    "author": ""
+    "author": "",
+    "word_count_target": 0,
+    "template": "default"
   },
   "characters": [],
-  "timeline": [],
+  "scenes": [],
+  "organizations": [],
+  "concepts": [],
   "items": [],
+  "chapters": [],
+  "timeline": [],
   "plot_threads": [],
   "relationships": []
 }

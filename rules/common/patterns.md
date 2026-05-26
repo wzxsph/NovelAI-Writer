@@ -1,3 +1,8 @@
+---
+name: patterns
+description: 通用设计模式
+---
+
 # Common Patterns
 
 ## Repository Pattern
