@@ -1,0 +1,16 @@
+{
+  "running": false,
+  "started_at": null,
+  "current_chapter": 0,
+  "target_chapter": 0,
+  "mode": "safe",
+  "scope": "all",
+  "completed_chapters": [],
+  "failed_chapters": [],
+  "stats": {
+    "total_words_written": 0,
+    "chapters_completed": 0,
+    "revisions_made": 0
+  },
+  "recent_activity": []
+}
