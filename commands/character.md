@@ -2,13 +2,13 @@
 description: 管理角色卡片 — 添加、查看、更新、删除角色
 ---
 
-# /novelai character
+# /character
 
 管理角色卡片。
 
 ## 子命令
 
-### `/novelai character add`
+### `/character add`
 
 添加新角色。
 
@@ -20,14 +20,16 @@ description: 管理角色卡片 — 添加、查看、更新、删除角色
 
 **示例：**
 ```
-/novelai character add --name "张三" --role protagonist --description "天剑宗大师兄"
+/character add --name "张三" --role protagonist --description "天剑宗大师兄"
 ```
 
-### `/novelai character list`
+**保存要求**：⚠️ 必须保存到 `state/characters/{char_id}.json`
+
+### `/character list`
 
 列出所有角色及状态。
 
-### `/novelai character update`
+### `/character update`
 
 更新角色状态。
 
@@ -44,12 +46,23 @@ description: 管理角色卡片 — 添加、查看、更新、删除角色
 
 **示例：**
 ```
-/novelai character update --name "张三" --field emotional_state --value "悲伤"
+/character update --name "张三" --field emotional_state --value "开心"
 ```
 
-### `/novelai character view`
+**保存要求**：⚠️ 必须更新 `state/characters/{char_id}.json`
+
+### `/character view`
 
 查看单个角色详情。
+
+## 保存规则 ⚠️
+
+所有角色操作**必须保存到文件**：
+- 新增角色：`state/characters/{char_id}.json`
+- 更新角色：`state/characters/{char_id}.json`
+- 删除角色：从文件系统删除对应文件
+
+**使用 Write 或 Edit 工具保存，不能仅停留在内存中显示。**
 
 ## 角色数据结构
 
