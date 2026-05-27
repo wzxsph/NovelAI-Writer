@@ -43,7 +43,7 @@ novelai_writer/
 │   ├── relationships/          # 关系状态
 │   └── chapters/               # 章节记录
 ├── chapters/                     # 章节正文存储
-└── examples/                    # 示例项目
+└── workflows/                    # 工作流（雪花创作法等）
 ```
 
 ## 核心概念
@@ -193,4 +193,3 @@ cp -r agents commands skills rules prompts knowledge workflows contexts state .c
 - [Everything Claude Code (ECC)](https://github.com/affaan-m/ECC)
 - [NovelForge](https://github.com/RhythmicWave/NovelForge)
 - [CLAUDE.md](CLAUDE.md) — 项目引导
-- [examples/](examples/) — 示例项目
