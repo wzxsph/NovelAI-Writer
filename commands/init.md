@@ -30,15 +30,17 @@ description: 初始化网文写作工作区
 state/
 ├── metadata/
 │   └── project.json          # 项目元数据
-├── characters/                # 角色状态（每角色一个文件）
+├── outline/                  # 大纲目录
+│   └── outline.json         # 整体大纲
+├── characters/              # 角色状态（每角色一个文件）
 ├── items/                    # 物品状态（每物品一个文件）
-├── scenes/                   # 场景状态（每场景一个文件）
-├── organizations/            # 组织状态（每组织一个文件）
-├── concepts/                 # 概念状态（每概念一个文件）
+├── scenes/                  # 场景状态（每场景一个文件）
+├── organizations/           # 组织状态（每组织一个文件）
+├── concepts/                # 概念状态（每概念一个文件）
 ├── timeline/                 # 时间线事件（每事件一个文件）
-├── plot_threads/             # 情节线状态（每情节线一个文件）
-├── relationships/            # 关系状态（每关系一个文件）
-└── chapters/                 # 章节记录（每章节一个文件）
+├── plot_threads/            # 情节线状态（每情节线一个文件）
+├── relationships/           # 关系状态（每关系一个文件）
+└── chapters/                # 章节记录（每章节一个文件）
 ```
 
 ## 初始化后的下一步

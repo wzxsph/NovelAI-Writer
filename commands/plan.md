@@ -20,12 +20,20 @@ description: 规划小说大纲、结构和情节
 1. **分析项目状态**：读取当前 state/ 目录下的所有状态文件
 2. **雪花创作法**（首次规划）：参考 @workflows/雪花创作法.md
 3. **生成大纲**：参考 @prompts/大纲生成.txt
-4. **保存状态**：将规划结果保存到对应的 state 文件
+4. **保存状态**：将规划结果保存到 `state/outline/` 目录
+
+## 保存路径
+
+| 类型 | 保存路径 |
+|------|----------|
+| 整体大纲 (outline) | `state/outline/outline.json` |
+| 分卷大纲 (volume) | `state/outline/volume_{N}.json` |
+| 章节大纲 (chapter) | `state/outline/chapter_{N}.json` |
 
 ## 输出
 
 - 文本大纲（显示给用户）
-- 状态文件更新（如 outline.json、chapters/{N}/outline.json）
+- 状态文件更新到 `state/outline/` 目录
 
 ## 首次规划使用雪花创作法
 
