@@ -3,6 +3,8 @@
 基于 Claude Code 的网文长篇写作助手插件系统。参考 ECC 架构模式和 NovelForge 设计理念，通过十维一致性校验框架，管理角色、物品、情节线和关系网络，确保数百章内容连贯一致。
 
 > 本项目处于构建初期，尚未经过充分测试，属于即兴创作的产物，在实际使用中可能会遇到各种问题。本项目深度参考了 [ECC](https://github.com/affaan-m/ECC) 和 [NovelForge](https://github.com/RhythmicWave/NovelForge) 的设计理念实现。
+>
+> **版本**: 1.2.1
 
 ## 技术栈
 
@@ -19,7 +21,7 @@
 ```
 novelai_writer/
 ├── agents/                       # 5 个智能体
-├── commands/                     # 15 个命令
+├── commands/                     # 16 个命令
 ├── skills/                       # 4 个技能
 ├── rules/
 │   ├── common/                  # 5 个通用规则
@@ -29,7 +31,7 @@ novelai_writer/
 ├── workflows/                   # 3 个工作流
 ├── contexts/                    # 3 个模式定义
 ├── state/                        # 分布式状态存储
-│   ├── metadata/project.json   # 项目元数据
+│   ├── metadata/                # 项目元数据
 │   ├── characters/              # 角色状态
 │   ├── items/                  # 物品状态
 │   ├── scenes/                  # 场景状态
@@ -39,6 +41,7 @@ novelai_writer/
 │   ├── plot_threads/            # 情节线状态
 │   ├── relationships/           # 关系状态
 │   └── chapters/                # 章节记录
+├── chapters/                     # 章节正文存储
 └── examples/                    # 示例项目
 ```
 
@@ -103,6 +106,15 @@ novelai_writer/
 /verify --chapter 1
 ```
 
+## 自动循环
+
+`/loop-start` 支持逐章自动撰写，每章执行完整流程：撰写→审阅→修正→状态更新。
+
+```bash
+/loop-start --scope chapter_range --from 1 --to 30
+/loop-status
+```
+
 ## 命令参考
 
 ### 初始化与状态
@@ -110,6 +122,8 @@ novelai_writer/
 |------|------|
 | `/init --template snowflake` | 初始化工作区 |
 | `/status` | 查看项目状态概览 |
+| `/loop-start` | 启动自动写小说循环 |
+| `/loop-status` | 查看循环状态 |
 
 ### 规划
 | 命令 | 说明 |
@@ -132,6 +146,7 @@ novelai_writer/
 | `/continue --chapter 5 --mode polish` | 润色章节 |
 | `/continue --chapter 5 --mode expand` | 扩写大纲为正文 |
 | `/verify --chapter 5 --scope all` | 校验一致性 |
+| `/revise --chapter 5` | 修正章节问题 |
 | `/chapters --range 1-30` | 列出章节概览 |
 
 ### 状态查看

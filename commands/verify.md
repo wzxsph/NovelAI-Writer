@@ -73,9 +73,34 @@ description: 校验章节一致性并保存审阅报告
 ## 保存要求 ⚠️
 
 **必须将审阅报告保存到文件**：
-- 报告路径：`state/chapters/chapter_{N}/review.json`
-- 使用 Write 工具保存，不能仅显示在对话中
-- 如果目录不存在，先创建 `state/chapters/chapter_{N}/` 目录
+
+1. **创建目录**：`state/chapters/chapter_{N}/`（如果不存在）
+2. **保存报告**：使用 Write 工具保存到 `state/chapters/chapter_{N}/review.json`
+3. **报告格式**：
+```json
+{
+  "chapter": N,
+  "timestamp": "ISO时间",
+  "scope": "all",
+  "violations": [
+    {
+      "severity": "critical|warning|info",
+      "dimension": "character_identity",
+      "description": "问题描述",
+      "location": "章节位置",
+      "suggestion": "修复建议"
+    }
+  ],
+  "passed_dimensions": ["dimension1", "dimension2"],
+  "summary": {
+    "critical_count": 0,
+    "warning_count": 0,
+    "info_count": 0,
+    "passed": true|false
+  }
+}
+```
+4. **验证保存**：保存后必须验证文件已创建
 
 ## 严重级别
 
