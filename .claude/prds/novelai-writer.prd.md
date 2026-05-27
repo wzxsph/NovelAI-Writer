@@ -73,7 +73,7 @@
 
 | # | Phase | Description | Status | Parallel | Depends | PRP Plan |
 |---|-------|-------------|--------|----------|---------|----------|
-| 1 | 状态文档架构设计 | 角色/事件/物品三大状态库的数据模型定义完成 | in-progress | - | - | [.claude/PRPs/plans/state-document-architecture.plan.md] |
+| 1 | 状态文档架构设计 | 角色/事件/物品三大状态库的数据模型定义完成 | complete | - | - | [.claude/PRPs/plans/completed/state-document-architecture.plan.md] |
 | 2 | 动态状态追踪引擎 | 续写时自动抽取新角色/物品/事件入状态库 | pending | - | 1 | - |
 | 3 | 上下文一致性校验 | 续写内容与状态库冲突时预警用户 | pending | - | 2 | - |
 | 4 | 逐章续写生成 | 基于前文 + 状态文档生成单章草稿 | pending | - | 2, 3 | - |
