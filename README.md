@@ -32,15 +32,16 @@ novelai_writer/
 ├── contexts/                    # 3 个模式定义
 ├── state/                        # 分布式状态存储
 │   ├── metadata/                # 项目元数据
+│   ├── outline/                 # 大纲目录
 │   ├── characters/              # 角色状态
-│   ├── items/                  # 物品状态
+│   ├── items/                   # 物品状态
 │   ├── scenes/                  # 场景状态
 │   ├── organizations/           # 组织状态
-│   ├── concepts/               # 概念状态
+│   ├── concepts/                # 概念状态
 │   ├── timeline/                # 时间线事件
 │   ├── plot_threads/            # 情节线状态
-│   ├── relationships/           # 关系状态
-│   └── chapters/                # 章节记录
+│   ├── relationships/          # 关系状态
+│   └── chapters/               # 章节记录
 ├── chapters/                     # 章节正文存储
 └── examples/                    # 示例项目
 ```
@@ -74,6 +75,9 @@ novelai_writer/
 状态信息分散存储在 `state/` 目录下的多个文件中，避免单一文件过于臃肿：
 
 - `metadata/project.json` — 项目元数据
+- `outline/outline.json` — 整体大纲
+- `outline/volume_{N}.json` — 分卷大纲
+- `outline/chapter_{N}.json` — 章节大纲
 - `characters/{id}.json` — 单个角色状态
 - `items/{id}.json` — 单个物品状态
 - `scenes/{id}.json` — 单个场景状态
