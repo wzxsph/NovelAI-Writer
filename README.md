@@ -4,7 +4,7 @@
 
 > 本项目处于构建初期，尚未经过充分测试，属于即兴创作的产物，在实际使用中可能会遇到各种问题。本项目深度参考了 [ECC](https://github.com/affaan-m/ECC) 和 [NovelForge](https://github.com/RhythmicWave/NovelForge) 的设计理念实现。
 >
-> **版本**: 1.2.1
+> **版本**: 1.2.2
 
 ## 技术栈
 
@@ -119,6 +119,22 @@ novelai_writer/
 /loop-status
 ```
 
+## 冲突警告机制
+
+`/verify` 和 `/loop-start` 执行一致性校验时，如发现问题会显示警告：
+
+```
+⚠️ [一致性警告] 第 5 章发现 3 个问题
+
+🔴 CRITICAL (必须修改):
+  • character_location: 角色张三位置不一致
+    建议: 修改为本章时间线内合理的位置
+
+🟡 WARNING (建议修改):
+  • emotional_continuity: 情感过渡不自然
+    ...
+```
+
 ## 命令参考
 
 ### 初始化与状态
@@ -149,9 +165,19 @@ novelai_writer/
 | `/continue --chapter 5 --words 3000` | 续写章节 |
 | `/continue --chapter 5 --mode polish` | 润色章节 |
 | `/continue --chapter 5 --mode expand` | 扩写大纲为正文 |
+| `/continue --chapter 5 --style 幽默,动人` | 续写并注入指定文风 |
 | `/verify --chapter 5 --scope all` | 校验一致性 |
 | `/revise --chapter 5` | 修正章节问题 |
 | `/chapters --range 1-30` | 列出章节概览 |
+
+### 文风控制参数
+
+`/continue --style` 支持以下参数（多个用逗号分隔）：
+- `幽默` — 添加幽默、诙谐元素
+- `动人` — 增加情感张力，打动读者
+- `口语化` — 使用更口语化的表达
+- `古风` — 古风文体（适用于仙侠/古代背景）
+- `燃向` — 高潮情节专用，增强张力
 
 ### 状态查看
 | 命令 | 说明 |

@@ -1,6 +1,6 @@
 {
   "name": "novelai-writer",
-  "version": "1.2.1",
+  "version": "1.2.2",
   "description": "网文长篇写作助手 — 状态追踪 + 上下文一致性引擎",
   "author": {
     "name": "NovelAI Writer"

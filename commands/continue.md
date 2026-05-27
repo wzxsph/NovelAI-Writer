@@ -16,17 +16,31 @@ description: 续写小说章节，基于上下文状态文档
   - `write`: 新写章节
   - `polish`: 润色现有章节
   - `expand`: 扩写大纲为正文
+- `--style`: 文风控制参数（可选，多个值用逗号分隔）
+  - `幽默`: 添加幽默、诙谐元素
+  - `动人`: 增加情感张力，打动读者
+  - `口语化`: 使用更口语化的表达
+  - `古风`: 古风文体（适用于仙侠/古代背景）
+  - `燃向`: 高潮情节专用，增强张力
+
+**文风组合示例**：
+```
+/continue --chapter 5 --style 幽默,动人
+/continue --chapter 10 --style 燃向
+/continue --chapter 15 --mode expand --style 古风
+```
 
 ## 执行流程
 
 1. **读取状态文档**：从 `state/` 目录读取相关状态文件
 2. **构建 P0-P3 上下文**：参考 `@rules/novelforge/p0-p3-context.md`
 3. **加载写作规则**：参考 `@rules/novelforge/novelai-rules.md`
-4. **生成章节内容**
-5. **保存章节正文**：⚠️ 必须保存到 `chapters/chapter_{N}.txt`
-6. **提取状态变化**
-7. **更新状态文档**：⚠️ 必须更新 `state/` 目录下的对应文件
-8. **保存章节记录**：⚠️ 必须保存到 `state/chapters/chapter_{N}.json`
+4. **注入文风参数**：如指定 `--style`，注入对应的风格提示词
+5. **生成章节内容**
+6. **保存章节正文**：⚠️ 必须保存到 `chapters/chapter_{N}.txt`
+7. **提取状态变化**
+8. **更新状态文档**：⚠️ 必须更新 `state/` 目录下的对应文件
+9. **保存章节记录**：⚠️ 必须保存到 `state/chapters/chapter_{N}.json`
 
 ## 保存要求 ⚠️
 
