@@ -1,0 +1,89 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "character.schema.json",
+  "title": "Character State",
+  "description": "角色状态数据结构",
+  "type": "object",
+  "required": ["id", "name", "role", "core_identity", "current_state"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "role": {
+      "type": "string",
+      "enum": ["protagonist", "antagonist", "supporting", "minor"]
+    },
+    "core_identity": {
+      "type": "object",
+      "properties": {
+        "appearance": { "type": "string" },
+        "personality": { "type": "string" },
+        "background": { "type": "string" },
+        "goals": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "secrets": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "current_state": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "object",
+          "properties": {
+            "current": { "type": "string" },
+            "previous": { "type": "string" },
+            "changed_at_chapter": { "type": "integer" }
+          }
+        },
+        "emotional_state": { "type": "string" },
+        "physical_state": { "type": "string" },
+        "possessions": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "物品ID列表"
+        },
+        "abilities": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "cultivation_realm": { "type": "string" },
+        "system_gold_finger": { "type": "string" }
+      }
+    },
+    "relationship_map": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "properties": {
+          "target_id": { "type": "string" },
+          "relationship_type": { "type": "string" },
+          "strength": { 
+            "type": "integer", 
+            "minimum": 1, 
+            "maximum": 10 
+          },
+          "updated_at_chapter": { "type": "integer" }
+        }
+      }
+    },
+    "timeline": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chapter": { "type": "integer" },
+          "event": { "type": "string" },
+          "timestamp": { "type": "string", "format": "date-time" }
+        }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "last_updated_chapter": { "type": "integer", "minimum": 0 },
+    "schema_version": { "type": "string" }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "item.schema.json",
+  "title": "Item State",
+  "description": "物品状态数据结构",
+  "type": "object",
+  "required": ["id", "name", "type", "current_holder"],
+  "properties": {
+    "id": { "type": "string" },
+    "name": { "type": "string" },
+    "type": {
+      "type": "string",
+      "enum": ["法宝", "武器", "丹药", "材料", "功法", "情报", "资产", "其他"]
+    },
+    "description": { "type": "string" },
+    "current_holder": {
+      "type": "string",
+      "description": "角色ID，当前持有者"
+    },
+    "previous_holders": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "abilities": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "current_state": {
+      "type": "string",
+      "description": "物品当前状态或损坏程度"
+    },
+    "significant_events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "chapter": { "type": "integer" },
+          "event": { "type": "string" }
+        }
+      },
+      "maxItems": 3
+    },
+    "created_at": { "type": "string", "format": "date-time" },
+    "updated_at": { "type": "string", "format": "date-time" },
+    "last_updated_chapter": { "type": "integer", "minimum": 0 },
+    "schema_version": { "type": "string" }
+  }
+}

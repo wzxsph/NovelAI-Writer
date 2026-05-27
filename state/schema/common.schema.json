@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "common.schema.json",
+  "title": "Common Fields",
+  "description": "所有状态文档共用的字段定义",
+  "definitions": {
+    "baseEntity": {
+      "type": "object",
+      "required": ["id", "name", "created_at", "updated_at"],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-z]+_[a-z0-9]+$",
+          "description": "格式: type_name 如 char_001, item_002"
+        },
+        "name": { "type": "string" },
+        "created_at": { 
+          "type": "string", 
+          "format": "date-time",
+          "description": "ISO 8601 格式"
+        },
+        "updated_at": { 
+          "type": "string", 
+          "format": "date-time" 
+        },
+        "last_updated_chapter": { 
+          "type": "integer",
+          "minimum": 0
+        },
+        "schema_version": {
+          "type": "string",
+          "pattern": "^\\d+\\.\\d+$"
+        }
+      }
+    },
+    "location": {
+      "type": "object",
+      "properties": {
+        "current": { "type": "string" },
+        "previous": { "type": "string" },
+        "changed_at_chapter": { "type": "integer" }
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "ISO 8601 格式: 2026-05-27T10:00:00Z"
+    },
+    "idPattern": {
+      "type": "string",
+      "pattern": "^(char|item|event|scene|org|plot|rel)_[a-z0-9]+$"
+    }
+  }
+}
